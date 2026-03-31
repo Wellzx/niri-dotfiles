@@ -1,1 +1,1 @@
-# niri-dotfiles
+# Dotfiles
