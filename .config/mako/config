@@ -1,0 +1,22 @@
+font=Monocraft 13
+layer=overlay
+width=400
+height=100
+margin=10
+padding=15
+max-icon-size=64
+default-timeout=5000
+
+background-color=#22222290
+text-color=#d6d6d6ff
+border-size=2
+border-color=#d6d6d6ff
+border-radius=0
+
+[urgency=low]
+background-color=#222222ff
+
+[urgency=high]
+background-color=#222222ff
+border-color=#cc6666ff
+default-timeout=0
