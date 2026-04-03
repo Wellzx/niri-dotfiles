@@ -14,7 +14,9 @@
     ],
     "modules-right": [
         "tray",
-        "group/hardware",
+        "cpu",
+        "memory",
+        "temperature",
         "pulseaudio",
         "backlight",
         "network",
@@ -30,27 +32,8 @@
     "niri/window": {
     	"format": "{title:.50}"
     },
-    "custom/hardware-wrap": {
-    	  "format": "",
-    	  "tooltip-format": "Resource Usage"
-    },
-    "group/hardware": {
-        "orientation": "horizontal",
-        "drawer": {
-        	  "transition-duration": 500,
-        	  "transition-left-to-right": true
-        },
-        "modules": [
-        	"custom/hardware-wrap",
-            "power-profiles-daemon",
-        	"cpu",
-        	"memory",
-        	"temperature",
-            "disk"
-        ]
-    },
     "custom/session-wrap": {
-        "format": "",
+        "format": "⏻",
     	  "tooltip-format": "Lock, Reboot, Shutdown"
     },
     "group/session": {
@@ -67,19 +50,19 @@
         ]
     },
     "custom/lock": {
-        "format": "",
+        "format": "",
         "on-click": "swaylock -c 000000",
         "tooltip": true,
         "tooltip-format": "Lock screen"
     },
     "custom/reboot": {
-        "format": "",
+        "format": "",
         "on-click": "systemctl reboot",
         "tooltip": true,
         "tooltip-format": "Reboot"
     },
     "custom/power": {
-        "format": "",
+        "format": "⏻",
         "on-click": "systemctl poweroff",
         "tooltip": true,
         "tooltip-format": "Power Off"
@@ -111,15 +94,19 @@
     }
   },
     "cpu": {
-        "format": "󰘚 {usage}%",
+        "format": "󰍛 {usage}%",
         "tooltip": true,
-        "interval": 1,
-        "on-click": "alacritty -e htop"
+        "interval": 1
     },
     "memory": {
-        "format": "󰍛 {}%",
+        "format": "󰘚 {}%",
         "interval": 1,
-        "on-click": "alacritty -e htop"
+        "on-click": "kitty -e btop"
+    },
+    "disk": {
+        "interval": 30,
+        "format": "󰋊 {percentage_used}%",
+        "path": "/"
     },
     "temperature": {
 	"thermal-zone": 2,
@@ -165,13 +152,8 @@
         "on-scroll-up": "brightnessctl set +5%",
         "on-scroll-down": "brightnessctl set 5%-"
     },
-    "disk": {
-        "interval": 30,
-        "format": "󰋊 {percentage_used}%",
-        "path": "/"
-    },
     "tray": {
-        "icon-size": 16,
+        "icon-size": 15,
         "spacing": 5
     }
 }
