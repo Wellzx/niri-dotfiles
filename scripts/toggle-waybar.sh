@@ -1,11 +1,11 @@
 #!/usr/bin/env bash
 
-if pgrep -x "waybar" > /dev/null; then
-    echo "Fechando waybar de forma limpa..."
-    killall -q waybar
-    
-    sleep 0.2
+PIDS=$(ps -u "$USER" -o pid,comm | grep "[w]aybar" | awk '{print $1}')
+
+if [ -n "$PIDS" ]; then
+    echo "Closing waybar..."
+    echo "$PIDS" | xargs kill -9
 else
-    echo "Abrindo waybar..."
-    waybar > /dev/null 2>&1 &
+    echo "Opening waybar..."
+    waybar &
 fi
