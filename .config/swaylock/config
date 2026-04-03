@@ -1,0 +1,61 @@
+ignore-empty-password
+show-failed-attempts
+font=Monocraft
+font-size=40
+
+clock
+# Clock format (24h)
+timestr=%R
+# Date format
+datestr=%a , %e of %B
+
+# Background image path
+image=/home/wel/Pictures/wallpapers/05.png
+scaling=fill
+
+fade-in=1
+# Background effects
+effect-blur=8x4
+# effect-greyscale
+# effect-pixelate=5
+
+# Indicator settings
+indicator
+indicator-caps-lock
+indicator-radius=180
+indicator-thickness=20
+
+# INDICATOR COLORS (Format: RRGGBB or RRGGBBAA)
+
+# Inside Circle Background Color
+inside-color=22222290
+inside-ver-color=22222290
+inside-wrong-color=22222290
+inside-clear-color=22222290
+inside-caps-lock-color=22222290
+
+# Ring Color (Outer Circle)
+ring-color=d6d6d6
+ring-ver-color=7f99bf
+ring-wrong-color=cc6666
+ring-clear-color=d98fd9
+ring-caps-lock-color=7fbfbf
+
+# Key Press and Separator Colors
+key-hl-color=7fbf7f
+bs-hl-color=cc6666
+separator-color=1f1f28
+
+# Text Colors
+text-color=d6d6d6
+text-ver-color=7f99bf
+text-wrong-color=cc6666
+text-clear-color=d98fd9
+text-caps-lock-color=7fbfbf
+
+# Line Color (Thin border between inside and ring)
+line-color=00000000
+line-ver-color=00000000
+line-wrong-color=00000000
+line-clear-color=00000000
+line-caps-lock-color=00000000
