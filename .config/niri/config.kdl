@@ -89,7 +89,9 @@ spawn-at-startup "/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1"
 spawn-at-startup "nm-applet"
 spawn-at-startup "dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP"
 spawn-at-startup "waybar"
+
 spawn-sh-at-startup "sleep 2 && awww-daemon"
+spawn-sh-at-startup "$HOME/scripts/idle.sh"
 
 environment {
 	QT_QPA_PLATFORM "wayland"
@@ -184,20 +186,15 @@ window-rule {
 binds {
     Mod+Shift+Slash { show-hotkey-overlay; }
 
-    // Suggested binds for running programs: terminal, app launcher, screen locker.
     Mod+T hotkey-overlay-title="Open a Terminal: kitty" { spawn "kitty"; }
     Mod+D hotkey-overlay-title="Run an Application: fuzzel" { spawn "fuzzel"; }
-    Super+Alt+L hotkey-overlay-title="Lock the Screen: swaylock" { spawn "swaylock"; }
+    Mod+Alt+L hotkey-overlay-title="Lock the Screen: swaylock" { spawn "swaylock"; }
     Mod+E hotkey-overlay-title="Open a File Manager" { spawn "thunar"; }
 
     // Scripts
     Mod+Shift+F12 hotkey-overlay-title=null { spawn-sh "$HOME/scripts/wallpaper.sh"; }
     Mod+F12 hotkey-overlay-title=null { spawn-sh "$HOME/scripts/select-wallpaper.sh"; }
     Mod+Shift+B hotkey-overlay-title=null {spawn-sh "$HOME/scripts/toggle-waybar.sh"; }
-
-    // Use spawn-sh to run a shell command. Do this if you need pipes, multiple commands, etc.
-    // Note: the entire command goes as a single argument. It's passed verbatim to `sh -c`.
-    Super+Alt+S allow-when-locked=true hotkey-overlay-title=null { spawn-sh "pkill orca || exec orca"; }
 
     XF86AudioRaiseVolume allow-when-locked=true { spawn-sh "wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.1+ -l 1.0"; }
     XF86AudioLowerVolume allow-when-locked=true { spawn-sh "wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.1-"; }
