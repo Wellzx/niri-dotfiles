@@ -44,7 +44,7 @@ ring-caps-lock-color=7fbfbf
 # Key Press and Separator Colors
 key-hl-color=7fbf7f
 bs-hl-color=cc6666
-separator-color=1f1f28
+separator-color=22222290
 
 # Text Colors
 text-color=d6d6d6
