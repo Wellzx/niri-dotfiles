@@ -6,7 +6,8 @@
 }
 
 window#waybar {
-    background-color: #222222;
+    /* background-color: #222222; */
+    background-color: rgba(34, 34, 34, 0.8);
     color: #e0e0e0;
     /* border-bottom: 2px solid #e0e0e0; */
 }
@@ -20,23 +21,12 @@ window#waybar {
 
 #workspaces button.active{
   background-color: transparent;
-  color: #4A4A4A;
-  padding: 0 0px;
-}
-
-#workspaces button:hover {
-    background-color: #3a3a3a;
-    border-radius: 20px;
-    padding: 2 4;
-}
-
-#workspaces button.focused {
-    font-weight: 900;
+  color: #4a4a4a;
 }
 
 #workspaces button.urgent {
-    background-color: #ff9a9e;
-    color: #5a5a5a;
+    background-color: #cc6666;
+    color: #4a4a4a;
 }
 
 #custom-session-wrap,
@@ -61,17 +51,7 @@ window#waybar {
 }
 
 #custom-session-wrap {
-    font-size: 15px;
-    padding-bottom: 4px;
+    font-size: 16px;
+    padding-bottom: 2px;
     padding-right: 12px;
-}
-
-#tray>.passive {
-    -gtk-icon-effect: dim;
-}
-
-#tray>.needs-attention {
-    -gtk-icon-effect: highlight;
-    color: #ff9a9e;
-    border-bottom-color: #ff9a9e;
 }
