@@ -15,4 +15,6 @@ if [ -n "$SELECTED" ]; then
     --transition-type any \
     --transition-fps 60 \
     --transition-duration 2
+
+    ln -sf "$WALLPAPER_DIR/$SELECTED" "$HOME/.cache/current_wallpaper"
 fi
