@@ -10,7 +10,7 @@ timestr=%R
 datestr=%a , %e of %B
 
 # Background image path
-image=/home/wel/Pictures/wallpapers/05.png
+image=/home/wel/.cache/current_wallpaper
 scaling=fill
 
 fade-in=1
