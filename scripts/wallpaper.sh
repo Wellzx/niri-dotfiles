@@ -10,3 +10,5 @@ if ! pgrep -x "awww-daemon" > /dev/null; then
 fi
 
 awww img "$WALLPAPER" --transition-type any --transition-fps 60 --transition-duration 2
+
+ln -sf "$WALLPAPER" "$HOME/.cache/current_wallpaper"
