@@ -1,4 +1,4 @@
-font=Monocraft 13
+font=Monocraft 12
 layer=overlay
 width=400
 height=100
@@ -9,7 +9,7 @@ default-timeout=5000
 
 background-color=#22222290
 text-color=#d6d6d6ff
-border-size=2
+border-size=3
 border-color=#d6d6d6ff
 border-radius=0
 
