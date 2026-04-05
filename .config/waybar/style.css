@@ -6,27 +6,28 @@
 }
 
 window#waybar {
-    /* background-color: #222222; */
     background-color: rgba(34, 34, 34, 0.8);
-    color: #e0e0e0;
-    /* border-bottom: 2px solid #e0e0e0; */
+    /* background-color: #222222; */
+    color: #d6d6d6;
+    /* border-bottom: 2px solid #d6d6d6; */
 }
 
 #workspaces button {
     padding: 0 5px;
     background-color: transparent;
-    color: #e0e0e0;
+    color: #d6d6d6;
     margin: 0;
 }
 
 #workspaces button.active{
   background-color: transparent;
-  color: #4a4a4a;
+  color: rgba(26, 26, 26, 0.4);
 }
 
 #workspaces button.urgent {
     background-color: #cc6666;
-    color: #4a4a4a;
+    color: rgba(26, 26, 26, 0.4);
+    /* color: #1A1A1A; */
 }
 
 #custom-session-wrap,
@@ -46,12 +47,12 @@ window#waybar {
 #tray {
     padding: 0 10px;
     margin: 0 2px;
-    border-bottom: 2px solid #e0e0e0;
+    border-bottom: 2px solid #d6d6d6;
     background-color: transparent;
 }
 
 #custom-session-wrap {
-    font-size: 16px;
+    font-size: 14px;
     padding-bottom: 2px;
     padding-right: 12px;
 }
@@ -61,5 +62,5 @@ tooltip {
 }
 
 tooltip label {
-    color: #e0e0e0;
-}
+    color: #d6d6d6;
+} 

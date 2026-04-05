@@ -50,19 +50,19 @@
         ]
     },
     "custom/lock": {
-        "format": "",
+        "format": "",
         "on-click": "swaylock",
         "tooltip": true,
         "tooltip-format": "Lock screen"
     },
     "custom/reboot": {
-        "format": "",
+        "format": "",
         "on-click": "systemctl reboot",
         "tooltip": true,
         "tooltip-format": "Reboot"
     },
     "custom/power": {
-        "format": "⏻",
+        "format": "󰐥",
         "on-click": "systemctl poweroff",
         "tooltip": true,
         "tooltip-format": "Power Off"
@@ -109,11 +109,12 @@
         "path": "/"
     },
     "temperature": {
-	"thermal-zone": 2,
-	"hwmon-path": ["/sys/class/hwmon/hwmon2/temp1_input", "/sys/class/thermal/thermal_zone0/temp"],
-	"critical-threshold": 80,
-	"format-critical": "{temperatureC}°C ",
-	"format": "{temperatureC}°C "
+    "interval": 1,
+    "hwmon-path": "/sys/class/hwmon/hwmon2/temp1_input",
+    "critical-threshold": 80,
+    // "on-click": "wezterm --config-file ~/.config/wezterm/float.lua start --class floatwezterm btm -e --default_widget_type temp",
+    "tooltip": true,
+    "format": " {temperatureC}°C"
     },
     "network": {
         "format-wifi": "󰖩 {essid} ({signalStrength}%)",
@@ -122,7 +123,7 @@
         "format-disconnected": "󰖪 Disconnected",
         "format-alt": "{ifname}: {ipaddr}/{cidr}",
         "tooltip-format": "{ifname}: {ipaddr}",
-        "on-click-right": "alacritty -e nmtui"
+        "on-click-right": "kitty -e nmtui"
     },
     "pulseaudio": {
     "format": "{icon} {volume}%",
